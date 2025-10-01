@@ -17,6 +17,14 @@
       max-height: 90vh;
       max-width: 100vh;
     }
+
+    button {
+      background: #e57000;
+      padding: 1rem;
+      border: 0;
+      color: white;
+      border-radius: 15px;
+    }
   </style>
 </head>
 
@@ -29,12 +37,12 @@
     <li>My Personal Bully</li>
   </ol>
 
-  <button id="toggle">Play Our Song</button>
-  <audio id="bg">
-    <source src="julie.mp3" type="audio/mpeg" />
-  </audio>
-
   <center>
+    <button id="toggle">Play Our Song</button>
+    <audio id="bg">
+      <source src="julie.mp3" type="audio/mpeg" />
+    </audio>
+
     <img src="jully.jpeg" />
   </center>
 
@@ -48,14 +56,14 @@
         try {
           await bg.play();
           playing = true;
-          btn.textContent = "Pause music";
+          btn.textContent = "Pause Our Song";
         } catch (err) {
           console.error("Playback failed:", err);
         }
       } else {
         bg.pause();
         playing = false;
-        btn.textContent = "Play music";
+        btn.textContent = "Play Our Song";
       }
     });
   </script>
