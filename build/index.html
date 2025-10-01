@@ -1,51 +1,62 @@
-<!DOCTYPE html>
-<htad>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terry Loves Juliet</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terry Loves Juliet</title>
 
+  <style>
+    html {
+      background: pink;
+      color: white;
+    }
 
-    <style>
+    h1 {
+      text-align: center;
+    }
 
-        html {
-            background: pink;
-            color: white;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            max-height: 90vh;
-            max-width: 100vh;
-        }
-
-    </style>
-
+    img {
+      max-height: 90vh;
+      max-width: 100vh;
+    }
+  </style>
 </head>
 
-
 <body>
+  <h1>Terry Loves Juliet</h1>
 
-    <h1>Terry Loves Juliet</h1>
+  <ol>
+    <li>My Diplomat</li>
+    <li>AnakSuNaMoon</li>
+    <li>My Personal Bully</li>
+  </ol>
 
-    <ol>
-        <li>My Diplomat</li>
-        <li>AnakSuNaMoon</li>
-        <li>My Personal Bully</li>
-    </ol>
+  <button id="toggle">Play Our Song</button>
+  <audio id="bg">
+    <source src="julie.mp3" type="audio/mpeg" />
+  </audio>
 
-    <center>
+  <center>
+    <img src="jully.jpeg" />
+  </center>
 
-        <img src="jully.jpeg" /> 
+  <script>
+    const bg = document.getElementById("bg");
+    const btn = document.getElementById("toggle");
+    let playing = false;
 
-    </center>
-
-
-    <audio autoplay loop>
-        <source src="julie.mp3" type="audio/mpeg">
-    </audio>
-    
+    btn.addEventListener("click", async () => {
+      if (!playing) {
+        try {
+          await bg.play();
+          playing = true;
+          btn.textContent = "Pause music";
+        } catch (err) {
+          console.error("Playback failed:", err);
+        }
+      } else {
+        bg.pause();
+        playing = false;
+        btn.textContent = "Play music";
+      }
+    });
+  </script>
 </body>
-</html>
