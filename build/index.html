@@ -25,60 +25,64 @@
       border-radius: 15px;
       background: #67acc5;
     }
+
+    h1,
+    button,
+    img,
+    h3 {
+      text-align: center;
+    }
   </style>
 </head>
 
 <body>
-  <center>
-    <h1>Teri ❤️ Juli</h1>
+  <h1>Teri ❤️ Juli</h1>
 
-    <br />
+  <button id="toggle">Play Our Song</button>
+  <audio id="bg">
+    <source src="julie.mp3" type="audio/mpeg" /></audio
+  ><br />
+  <br /><br />
+  <br />
 
-    <button id="toggle">Play Our Song</button>
-    <audio id="bg">
-      <source src="julie.mp3" type="audio/mpeg" /></audio
-    ><br />
-    <br /><br />
+  <div class="row">
+    <div class="col s6">
+      <h2>I Call Her</h2>
 
-    <div class="row">
-      <div class="col s6">
-        <h2>I Call Her</h2>
+      <ul style="list-style-type: none">
+        <li>My Diplomat 🧑‍💼</li>
 
-        <ul style="list-style-type: none">
-          <li>My Diplomat 🧑‍💼</li>
-
-          <li>My Sun Shine ☀️</li>
-        </ul>
-      </div>
-
-      <br /><br /><br />
-
-      <div class="col s6">
-        <h2>Her Qualities</h2>
-
-        <ul style="list-style-type: none">
-          <li>Beauty 🌹</li>
-
-          <li>Elegance 👗</li>
-
-          <li>Feminine 🌸</li>
-
-          <li>Eloquence 🎼</li>
-
-          <li>Composure 🧘‍♀️</li>
-
-          <li>God Fearing 🛐</li>
-        </ul>
-      </div>
+        <li>My Sun Shine ☀️</li>
+      </ul>
     </div>
 
     <br /><br /><br />
 
-    <h3>MEET THE LOVE OF MY LIFE</h3>
-    <br />
+    <div class="col s6">
+      <h2>Her Qualities</h2>
 
-    <img src="jully.jpeg" />
-  </center>
+      <ul style="list-style-type: none">
+        <li>Beauty 🌹</li>
+
+        <li>Elegance 👗</li>
+
+        <li>Feminine 🌸</li>
+
+        <li>Eloquence 🎼</li>
+
+        <li>Composure 🧘‍♀️</li>
+
+        <li>God Fearing 🛐</li>
+      </ul>
+    </div>
+  </div>
+
+  <br /><br /><br />
+
+  <h3>MEET THE LOVE OF MY LIFE</h3>
+  <br />
+
+  <img src="jully.jpeg" />
 
   <script>
     const bg = document.getElementById("bg");
